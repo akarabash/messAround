@@ -38,7 +38,7 @@ int main()
   		printf("prod: Map failed: %s\n", strerror(errno));
   		exit(1);
   	}
-
+	/*
   	ptr = shm_base;
   	ptr += sprintf(ptr, "%s", message0);
   	ptr += sprintf(ptr, "%s", message1);
