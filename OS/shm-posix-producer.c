@@ -12,7 +12,7 @@
  * modifications by dheller@cse.psu.edu, 31 Jan. 2014
  */
 
-#define _GNU_SOURCE
+//#define _GNU_SOURCE
 
 #include <stdio.h>
 #include <stdlib.h>
