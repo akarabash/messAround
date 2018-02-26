@@ -29,7 +29,11 @@ void display(char *prog, char *bytes, int n);
 
 int main(void)
 {
-  const char *name = "/shm-example";	// file name
+  char arrays[64];
+  const char *name = arrays; 	// file name
+  printf("Enter Key \n");
+  scanf("%s", name);
+  
   const int SIZE = 4096;		// file size
 
   const char *message0 = "Studying ";
