@@ -15,9 +15,9 @@ int main()
   const char *name = "OS";	// file name
   const int SIZE = 4096;		// file size
 
-  const char *message0 = "Studying ";
-  const char *message1 = "Operating Systems ";
-  const char *message2 = "Is Fun!";
+  const char *message0 = "Amin ";
+  const char *message1 = "February ";
+  const char *message2 = "!";
   const char *msg_end  = "\n";
 
 
@@ -42,16 +42,22 @@ int main()
 
   /* read from the mapped shared memory segment */
   //display("cons", shm_base, 64);	// first as bytes, then as a string
-  //printf("%s", shm_base);
-
-  ptr = shm_base;
-  ptr += sprintf(ptr, "%s", message0);
-  ptr += sprintf(ptr, "%s", message1);
-  ptr += sprintf(ptr, "%s", message2);
-  ptr += sprintf(ptr, "%s", msg_end);
   
+  /* check if shared memory object contains any status */
   printf("%s", shm_base);
+ 
+  /* if empty write into shm */
+  if(shm_base == '\0'){
+    ptr = shm_base;
+    ptr += sprintf(ptr, "%s", message0);
+    ptr += sprintf(ptr, "%s", message1);
+    ptr += sprintf(ptr, "%s", message2);
+    ptr += sprintf(ptr, "%s", msg_end);
+  }
   
+  else{
+    printf("%s", shm_base);
+  }
   
   char array[64];
   char *c = array;
