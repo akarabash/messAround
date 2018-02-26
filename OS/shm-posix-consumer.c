@@ -53,6 +53,21 @@ int main(void)
   /* read from the mapped shared memory segment */
   display("cons", shm_base, 64);	// first as bytes, then as a string
   printf("%s", shm_base);
+  
+  
+  * Write to the mapped shared memory region.
+   *
+   * We increment the value of ptr after each write, but we
+   * are ignoring the possibility that sprintf() fails.
+   */
+  display("prod", shm_base, 64);
+  ptr = shm_base;
+  ptr += sprintf(ptr, "%s", message0);
+  ptr += sprintf(ptr, "%s", message1);
+  ptr += sprintf(ptr, "%s", message2);
+  ptr += sprintf(ptr, "%s", msg_end);
+  display("prod", shm_base, 64);
+  
 
   /* remove the mapped shared memory segment from the address space of the process */
   if (munmap(shm_base, SIZE) == -1) {
