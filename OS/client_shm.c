@@ -54,7 +54,7 @@ int main()
   
   
   char array[64];
-  char *c = array; 	// file name
+  char *c = array;
   printf("Do you want to terminate? Y or N \n");
   scanf("%s", c);
   if(name = 'Y'){
