@@ -17,7 +17,7 @@ int main()
   	printf("Enter Key \n");
   	scanf("%s", name);
 
-  	const char *message0 = "Amin";
+  	const char *message0 = "Amin ";
   	const char *message1 = "February ";
   	const char *message_end = "\n";
 
