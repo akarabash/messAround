@@ -43,7 +43,7 @@ int main(void)
   char *ptr;	
   
   /* open the shared memory segment as if it was a file */
-  shm_fd = shm_open(name, O_RDONLY, 0666);
+  shm_fd = shm_open(name, O_RDWR, 0666);
   if (shm_fd == -1) {
     printf("cons: Shared memory failed: %s\n", strerror(errno));
     exit(1);
@@ -67,13 +67,13 @@ int main(void)
    * We increment the value of ptr after each write, but we
    * are ignoring the possibility that sprintf() fails.
    */
-  display("prod", shm_base, 64);
+  //display("prod", shm_base, 64);
   ptr = shm_base;
   ptr += sprintf(ptr, "%s", message0);
   ptr += sprintf(ptr, "%s", message1);
   ptr += sprintf(ptr, "%s", message2);
   ptr += sprintf(ptr, "%s", msg_end);
-  display("prod", shm_base, 64);
+  display("cons", shm_base, 64);
   
 
   /* remove the mapped shared memory segment from the address space of the process */
