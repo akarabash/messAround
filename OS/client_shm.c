@@ -49,9 +49,8 @@ int main()
   ptr += sprintf(ptr, "%s", message1);
   ptr += sprintf(ptr, "%s", message2);
   ptr += sprintf(ptr, "%s", msg_end);
-
-
-
+  
+  printf("%s", shm_base);
 
   /* remove the mapped shared memory segment from the address space of the process */
   if (munmap(shm_base, SIZE) == -1) {
