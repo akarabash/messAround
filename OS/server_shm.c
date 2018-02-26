@@ -17,7 +17,7 @@ int main()
   	printf("Enter Key \n");
   	scanf("%s", name);
 
-  	const char *message0 = "Amin ";
+  	const char *message0 = '\0';
   	const char *message1 = "February ";
   	const char *message_end = "\n";
 
@@ -38,11 +38,9 @@ int main()
   		printf("prod: Map failed: %s\n", strerror(errno));
   		exit(1);
   	}
-	/*
+	
   	ptr = shm_base;
   	ptr += sprintf(ptr, "%s", message0);
-  	ptr += sprintf(ptr, "%s", message1);
-  	ptr += sprintf(ptr, "%s", message_end);
 
   	/*
   	if (munmap(shm_base, SIZE) == -1) {
