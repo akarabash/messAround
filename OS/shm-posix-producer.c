@@ -30,7 +30,7 @@ void display(char *prog, char *bytes, int n);
 int main(void)
 {
   char arrays[64];
-  const char *name = arrays; 	// file name
+  char *name = arrays; 	// file name
   printf("Enter Key \n");
   scanf("%s", name);
   
