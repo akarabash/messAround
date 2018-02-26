@@ -18,7 +18,7 @@ int main()
   	scanf("%s", name);
 
   	const char *message0 = "Amin";
-  	const char *message1 = "February";
+  	const char *message1 = "February ";
   	const char *message_end = "\n";
 
   	int shm_fd;
