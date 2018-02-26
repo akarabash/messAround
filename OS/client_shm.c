@@ -53,12 +53,12 @@ int main()
   printf("%s", shm_base);
   
   
-  char arrays[64];
-  char *name = arrays; 	// file name
+  char array[64];
+  char *c = array; 	// file name
   printf("Do you want to terminate? Y or N \n");
-  scanf("%s", name);
+  scanf("%s", c);
   if(name = 'Y'){
-    exit(1)
+    exit(1);
   }
   
 
