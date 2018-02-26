@@ -31,10 +31,17 @@ int main(void)
 {
   const char *name = "OS";	// file name
   const int SIZE = 4096;		// file size
+  
+  const char *message0 = "Studying ";
+  const char *message1 = "Operating Systems ";
+  const char *message2 = "Is Fun!";
+  const char *msg_end  = "\n";
+  
 
   int shm_fd;		// file descriptor, from shm_open()
   char *shm_base;	// base address, from mmap()
-
+  char *ptr;	
+  
   /* open the shared memory segment as if it was a file */
   shm_fd = shm_open(name, O_RDONLY, 0666);
   if (shm_fd == -1) {
