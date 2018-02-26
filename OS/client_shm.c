@@ -42,7 +42,7 @@ int main()
 
   /* read from the mapped shared memory segment */
   //display("cons", shm_base, 64);	// first as bytes, then as a string
-  printf("%s", shm_base);
+  //printf("%s", shm_base);
 
   ptr = shm_base;
   ptr += sprintf(ptr, "%s", message0);
