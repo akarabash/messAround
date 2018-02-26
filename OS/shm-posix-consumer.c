@@ -55,7 +55,7 @@ int main(void)
   printf("%s", shm_base);
   
   
-  * Write to the mapped shared memory region.
+  /* Write to the mapped shared memory region.
    *
    * We increment the value of ptr after each write, but we
    * are ignoring the possibility that sprintf() fails.
