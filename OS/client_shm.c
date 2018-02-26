@@ -58,7 +58,7 @@ int main()
   printf("Do you want to terminate? Y or N \n");
   scanf("%s", c);
   if(name = 'Y'){
-    exit(1);
+    exit(0);
   }
   
 
