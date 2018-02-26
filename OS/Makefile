@@ -22,10 +22,10 @@ endif
 all: cons prod
 
 cons: shm-posix-consumer.c
-	gcc $(OPT_GCC) $(OPT) -o cons shm-posix-consumer.c $(LIB)
+	gcc $(OPT_GCC) $(OPT) -o cons shm-posix-consumer.c -lrt
 
 prod: shm-posix-producer.c
-	gcc $(OPT_GCC) $(OPT) -o prod shm-posix-producer.c $(LIB)
+	gcc $(OPT_GCC) $(OPT) -o prod shm-posix-producer.c -lrt
 
 run: cons prod
 	./prod
