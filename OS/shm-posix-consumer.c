@@ -29,7 +29,7 @@ void display(char *prog, char *bytes, int n);
 
 int main(void)
 {
-  const char *name = "/shm-example";	// file name
+  const char *name = "OS";	// file name
   const int SIZE = 4096;		// file size
 
   int shm_fd;		// file descriptor, from shm_open()
