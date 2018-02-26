@@ -18,8 +18,6 @@ int main()
   	scanf("%s", name);
 
   	const char *message0 = '\0';
-  	const char *message1 = "February ";
-  	const char *message_end = "\n";
 
   	int shm_fd;
   	char *shm_base;
@@ -39,6 +37,7 @@ int main()
   		exit(1);
   	}
 	
+	printf("%s", shm_base);
   	ptr = shm_base;
   	ptr += sprintf(ptr, "%s", message0);
 
