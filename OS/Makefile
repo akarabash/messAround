@@ -21,11 +21,11 @@ endif
 
 all: cons prod
 
-cons: shm-posix-consumer.c
-	gcc $(OPT_GCC) -D_XOPEN_SOURCE=700 -o cons shm-posix-consumer.c -lrt
+cons: client_shm.c
+	gcc $(OPT_GCC) -D_XOPEN_SOURCE=700 -o cons client_shm.c -lrt
 
-prod: shm-posix-producer.c
-	gcc $(OPT_GCC) -D_XOPEN_SOURCE=700 -o prod shm-posix-producer.c -lrt
+prod: server_shm.c
+	gcc $(OPT_GCC) -D_XOPEN_SOURCE=700 -o prod server_shm.c -lrt
 
 run: cons prod
 	./prod
