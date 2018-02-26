@@ -19,7 +19,7 @@ int main()
 
   	const char *message0 = "Amin";
   	const char *message1 = "February";
-  	const char *msg_end = "\n";
+  	const char *message_end = "\n";
 
   	int shm_fd;
   	char *shm_base;
@@ -33,7 +33,7 @@ int main()
 
   	ftruncate(shm_fd, shm_size);
 
-  	shm_base == mmap(0, shm_size, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+  	shm_base = mmap(0, shm_size, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
   	if(shm_base == MAP_FAILED){
   		printf("prod: Map failed: %s\n", strerror(errno));
   		exit(1);
