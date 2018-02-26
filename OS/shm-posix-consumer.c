@@ -12,6 +12,8 @@
  * modifications by dheller@cse.psu.edu, 31 Jan. 2014
  */
 
+#define _GNU_SOURCE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -21,6 +23,7 @@
 #include <sys/mman.h>
 #include <errno.h>
 #include <string.h>
+
 
 void display(char *prog, char *bytes, int n);
 
