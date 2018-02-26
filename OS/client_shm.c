@@ -51,6 +51,16 @@ int main()
   ptr += sprintf(ptr, "%s", msg_end);
   
   printf("%s", shm_base);
+  
+  
+  char arrays[64];
+  char *name = arrays; 	// file name
+  printf("Do you want to terminate? Y or N \n");
+  scanf("%s", name);
+  if(name = 'Y'){
+    exit(1)
+  }
+  
 
   /* remove the mapped shared memory segment from the address space of the process */
   if (munmap(shm_base, SIZE) == -1) {
