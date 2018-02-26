@@ -21,11 +21,11 @@ endif
 
 all: cons prod
 
-cons: shm-posix-consumer.c
-	gcc $(OPT_GCC) $(OPT) -o cons shm-posix-consumer.c $(LIB)
+cons: Client.c
+	gcc $(OPT_GCC) $(OPT) -o cons Client.c $(LIB)
 
-prod: shm-posix-producer.c
-	gcc $(OPT_GCC) $(OPT) -o prod shm-posix-producer.c $(LIB)
+prod: Server.c
+	gcc $(OPT_GCC) $(OPT) -o prod Server.c $(LIB)
 
 run: cons prod
 	./prod
