@@ -55,6 +55,7 @@ int main(){
 	
 	else{
 		printf("%s", shm_base);
+		printf("\n");
 		printf("Enter Name \n");
   		scanf("%s", name);
 		printf("Enter Date \n");
