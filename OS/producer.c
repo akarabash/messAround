@@ -14,12 +14,8 @@ int main()
 	const int shm_size = 4096; //file size
 	const char *name = "OS";  //file name
 
-	const char *message0 = "Studying ";
-  	const char *message1 = "Operating Systems ";
-  	const char *message2 = "Is Fun!";
-  	const char *msg_end  = "\n";
-
-
+	const char *message0 = "First Time";
+  	
 	int shm_fd;
 	char *shm_base;
 	char *ptr;
@@ -42,7 +38,7 @@ int main()
 	}
 	/* write to shared memory segment */
 	ptr = shm_base;
-  	ptr += sprintf(ptr, "%s", "");
+  	ptr += sprintf(ptr, "%s", message0);
   
   	return 0;
   }
