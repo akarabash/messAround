@@ -33,13 +33,14 @@ int main()
 	/* map shared memory segment to address space of process */
 	shm_base = mmap(0, shm_size, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
 	if (shm_base == MAP_FAILED) {
-		printf("Map failed\n");
-		exit(1);
+	  printf("Map failed\n");
+	  exit(1);
 	}
 	/* write to shared memory segment */
 	ptr = shm_base;
   	ptr += sprintf(ptr, "%s", message0);
-  
+	close(shm_fd);
+	
   	return 0;
   }
 
