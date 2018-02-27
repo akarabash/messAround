@@ -31,7 +31,7 @@ int main(){
 
   	shm_fd = shm_open(name, O_RDWR, 0666);
   	if(shm_fd == -1){
-  		printf("Shared memory failed\n")
+  		printf("Shared memory failed\n");
   		exit(1);
   	}
 
