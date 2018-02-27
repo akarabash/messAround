@@ -44,7 +44,7 @@ int main()
   //display("cons", shm_base, 64);	// first as bytes, then as a string
   
   /* check if shared memory object contains any status */
-  printf("%s", shm_base);
+  //printf("%s", shm_base);
  
   /* write into shared memory */
    ptr = shm_base;
