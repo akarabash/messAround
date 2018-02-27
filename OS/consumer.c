@@ -14,6 +14,10 @@ int main(){
   	char *name = arrays; 	// file name
   	printf("Enter Key \n");
   	scanf("%s", name);
+	
+	int shm_fd;
+  	char *shm_base;
+  	char *ptr;
 
   	const int shm_size = 4096;
 
