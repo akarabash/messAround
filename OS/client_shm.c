@@ -54,10 +54,6 @@ int main()
    ptr += sprintf(ptr, "%s", msg_end);
   
   
-  else{
-    printf("%s", shm_base);
-  }
-  
   char array[64];
   char *c = array;
   printf("Do you want to terminate? Y or N \n");
