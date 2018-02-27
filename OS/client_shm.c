@@ -44,14 +44,14 @@ int main()
   //display("cons", shm_base, 64);	// first as bytes, then as a string
   
   /* check if shared memory object contains any status */
-  //printf("%s", shm_base);
+  printf("%s", shm_base);
  
   /* write into shared memory */
-   ptr = shm_base;
-   ptr += sprintf(ptr, "%s", message0);
-   ptr += sprintf(ptr, "%s", message1);
-   ptr += sprintf(ptr, "%s", message2);
-   ptr += sprintf(ptr, "%s", msg_end);
+  ptr = shm_base;
+  ptr += sprintf(ptr, "%s", message0);
+  ptr += sprintf(ptr, "%s", message1);
+  ptr += sprintf(ptr, "%s", message2);
+  ptr += sprintf(ptr, "%s", msg_end);
   
   
   char array[64];
