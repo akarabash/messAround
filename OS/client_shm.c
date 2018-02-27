@@ -46,14 +46,13 @@ int main()
   /* check if shared memory object contains any status */
   printf("%s", shm_base);
  
-  /* if empty write into shm */
-  if(shm_base == '\0'){
-    ptr = shm_base;
-    ptr += sprintf(ptr, "%s", message0);
-    ptr += sprintf(ptr, "%s", message1);
-    ptr += sprintf(ptr, "%s", message2);
-    ptr += sprintf(ptr, "%s", msg_end);
-  }
+  /* write into shared memory */
+   ptr = shm_base;
+   ptr += sprintf(ptr, "%s", message0);
+   ptr += sprintf(ptr, "%s", message1);
+   ptr += sprintf(ptr, "%s", message2);
+   ptr += sprintf(ptr, "%s", msg_end);
+  
   
   else{
     printf("%s", shm_base);
