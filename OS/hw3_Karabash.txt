@@ -1,0 +1,33 @@
+Script started on Tue 27 Feb 2018 07:49:39 AM MST
+]0;nima@nima-VirtualBox: ~/messAround/OS[01;32mnima@nima-VirtualBox[00m:[01;34m~/messAround/OS[00m$ make clean run
+rm -f cons prod
+gcc -std=c99 -Wall -Wextra -D_XOPEN_SOURCE=700 -o cons consumer.c -lrt
+[01m[Kconsumer.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kconsumer.c:81:8:[m[K [01;35m[Kwarning: [m[Kcomparison between pointer and integer
+   if(c == 'Y'){
+[01;32m[K        ^[m[K
+gcc -std=c99 -Wall -Wextra -D_XOPEN_SOURCE=700 -o prod producer.c -lrt
+./prod
+./cons
+Enter Key 
+OS
+Enter Name 
+Amin
+Enter Date 
+02/27/2018
+Do you want to terminate process? Y/N 
+Y
+]0;nima@nima-VirtualBox: ~/messAround/OS[01;32mnima@nima-VirtualBox[00m:[01;34m~/messAround/OS[00m$ ./cons
+Enter Key 
+OS
+Amin 02/27/2018 
+Enter Name 
+Nima 0  
+Enter Date 
+02? /27? /2018
+Do you want to terminate process? Y/N 
+Y
+]0;nima@nima-VirtualBox: ~/messAround/OS[01;32mnima@nima-VirtualBox[00m:[01;34m~/messAround/OS[00m$ exit
+exit
+
+Script done on Tue 27 Feb 2018 07:51:31 AM MST
