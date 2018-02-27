@@ -80,11 +80,12 @@ int main()
     exit(1);
   }
 
-  /* remove the shared memory segment from the file system */
+  /* remove the shared memory segment from the file system 
   if (shm_unlink(name) == -1) {
     printf("cons: Error removing %s: %s\n", name, strerror(errno));
     exit(1);
   }
+  */
 
   return 0;
 }
