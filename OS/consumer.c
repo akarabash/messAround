@@ -15,15 +15,19 @@ int main(){
   	printf("Enter Key \n");
   	scanf("%s", name);
 	
+	char array[64];
+  	char *date = array;
+	
+	char arr[64];
+  	char *c = arr;
+	
+	
 	int shm_fd;
   	char *shm_base;
   	char *ptr;
 
   	const int shm_size = 4096;
 
-  	const char *message0 = "Amin ";
-  	const char *message1 = "February";
-  	const char *message_end = "\n";
 
   	shm_fd = shm_open(name, O_RDWR, 0666);
   	if(shm_fd == -1){
@@ -37,35 +41,36 @@ int main(){
   	}
 
   	/* check to see if anything written to shared memory */
-  	if(shm_base == '\0'){
-  		/*read from the mapped shared memory segment */
-  		printf("%s", shm_base);
-
-  		/* write to shared memory segment */
+  	if(strcmp(shm_base,"First Time") == 0){
+  		printf("Enter Name \n");
+  		scanf("%s", name);
+		printf("Enter Date \n");
+  		scanf("%s", date);
 		ptr = shm_base;
-  		ptr += sprintf(ptr, "%s", message0);
-  		ptr += sprintf(ptr, "%s", message1);
-  		ptr += sprintf(ptr, "%s", message_end);
-
+  		ptr += sprintf(ptr, "%s", name);
+  		ptr += sprintf(ptr, "%s",  " ");
+  		ptr += sprintf(ptr, "%s", date);
+		ptr += sprintf(ptr, "%s",  " ");
+	}
+	
+	else{
+		printf("%s", shm_base);
+		printf("Enter Name \n");
+  		scanf("%s", name);
+		printf("Enter Date \n");
+  		scanf("%s", date);
+		ptr = shm_base;
+  		ptr += sprintf(ptr, "%s", name);
+  		ptr += sprintf(ptr, "%s",  " ");
+  		ptr += sprintf(ptr, "%s", date);
+		ptr += sprintf(ptr, "%s",  " ");
   	}
 
-  	
-
-  	/*read from the mapped shared memory segment */
-  	//printf("%s", shm_base);
-
-
-
-
-  	/* write to shared memory segment */
-	ptr = shm_base;
-  	ptr += sprintf(ptr, "%s", message0);
-  	ptr += sprintf(ptr, "%s", message1);
-  	ptr += sprintf(ptr, "%s", message_end);
-
-
-
+  	printf("Do you want to terminate? Y/N \n");
+  	scanf("%s", c);
+	if(c == 'Y'){
+		exit(0);
+	}
   	return 0;
-
-
+	
 }
